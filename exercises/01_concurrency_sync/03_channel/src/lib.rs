@@ -50,6 +50,7 @@ pub fn multi_producer(n_producers: usize) -> Vec<String> {
     for h in handles {
         h.join().unwrap();
     }
+    drop(sd);
 
     let mut ret = vec![];
 
