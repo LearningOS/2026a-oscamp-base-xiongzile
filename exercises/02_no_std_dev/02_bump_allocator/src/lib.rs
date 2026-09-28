@@ -30,6 +30,7 @@
 //! - `AtomicUsize` and `compare_exchange` (CAS loop)
 
 #![cfg_attr(not(test), no_std)]
+extern crate alloc;
 
 use core::alloc::{GlobalAlloc, Layout};
 use core::ptr::null_mut;
@@ -74,7 +75,17 @@ unsafe impl GlobalAlloc for BumpAllocator {
         // 5. Atomically update next to end using compare_exchange
         //    (if CAS fails, another thread raced — retry in a loop)
         // 6. Return the aligned address as a pointer
-        todo!()
+        let addr = self.next.load(Ordering::SeqCst);
+        let aligned_addr = (addr + layout.align() - 1) & !(layout.align() - 1);
+
+        let end = aligned_addr + layout.size();
+
+        if end > self.heap_end {
+            null_mut()
+        } else {
+            self.next.store(end, Ordering::SeqCst);
+            aligned_addr as *mut u8
+        }
     }
 
     unsafe fn dealloc(&self, _ptr: *mut u8, _layout: Layout) {
@@ -87,6 +98,8 @@ unsafe impl GlobalAlloc for BumpAllocator {
 // ============================================================
 #[cfg(test)]
 mod tests {
+    use alloc::vec;
+    use alloc::vec::Vec;
     use super::*;
 
     const HEAP_SIZE: usize = 4096;
