@@ -27,7 +27,7 @@
 pub unsafe extern "C" fn my_memcpy(dst: *mut u8, src: *const u8, n: usize) -> *mut u8 {
     // TODO: Implement memcpy
     // Hint: read bytes from src one by one and write to dst
-    for i in (0..n) {
+    for i in 0..n {
         *dst.add(i) = *src.add(i);
     }
     dst
@@ -42,7 +42,7 @@ pub unsafe extern "C" fn my_memcpy(dst: *mut u8, src: *const u8, n: usize) -> *m
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn my_memset(dst: *mut u8, c: u8, n: usize) -> *mut u8 {
     // TODO: Implement memset
-    for i in (0..n) {
+    for i in 0..n {
         *dst.add(i) = 0;
     }
     dst
