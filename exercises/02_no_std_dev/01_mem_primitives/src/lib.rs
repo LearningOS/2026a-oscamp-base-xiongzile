@@ -43,7 +43,7 @@ pub unsafe extern "C" fn my_memcpy(dst: *mut u8, src: *const u8, n: usize) -> *m
 pub unsafe extern "C" fn my_memset(dst: *mut u8, c: u8, n: usize) -> *mut u8 {
     // TODO: Implement memset
     for i in 0..n {
-        *dst.add(i) = 0;
+        *dst.add(i) = c;
     }
     dst
 }
