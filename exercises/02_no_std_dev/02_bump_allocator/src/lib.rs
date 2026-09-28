@@ -98,9 +98,9 @@ unsafe impl GlobalAlloc for BumpAllocator {
 // ============================================================
 #[cfg(test)]
 mod tests {
+    use super::*;
     use alloc::vec;
     use alloc::vec::Vec;
-    use super::*;
 
     const HEAP_SIZE: usize = 4096;
 
