@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-xiongzile",
-  "commit": "152677e59ce2ff75a42d62dcfde5a0d82adf8300",
-  "score": 19,
+  "commit": "74a0096cdec56d5ca59ecf17670b0b3f2747f58d",
+  "score": 24,
   "totalScore": 100,
   "exercises": [
     {
@@ -44,9 +44,9 @@
     {
       "name": "bump_allocator",
       "max": 5,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 5,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "free_list_allocator",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "xiongzile",
-  "runId": "36399458612",
+  "runId": "36404226739",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
