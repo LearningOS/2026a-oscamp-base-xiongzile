@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-xiongzile",
-  "commit": "dc9975090bc1fee1353116bee59472b60d18a860",
-  "score": 50,
+  "commit": "8d66b21c0612a287771941c1e9246b7359f3c90c",
+  "score": 55,
   "totalScore": 100,
   "exercises": [
     {
@@ -100,9 +100,9 @@
     {
       "name": "rwlock",
       "max": 5,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 5,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "stack_coroutine",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "xiongzile",
-  "runId": "36451441077",
+  "runId": "36454651659",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
