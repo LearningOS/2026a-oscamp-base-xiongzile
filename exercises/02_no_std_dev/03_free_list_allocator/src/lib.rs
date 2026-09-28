@@ -157,6 +157,7 @@ unsafe impl GlobalAlloc for FreeListAllocator {
         // 2. Write FreeBlock { size, next: current list head }
         // 3. Update free_list head to ptr
         let fb_ptr = ptr as *mut FreeBlock;
+        (*fb_ptr).size = size;
         (*fb_ptr).next = self.free_list_head();
         self.set_free_list_head(fb_ptr);
     }
