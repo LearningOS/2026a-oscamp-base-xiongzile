@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-xiongzile",
-  "commit": "3e5db0d00fc7f718cdea87f1618dab6b0e0ebb4e",
-  "score": 46,
+  "commit": "dc9975090bc1fee1353116bee59472b60d18a860",
+  "score": 50,
   "totalScore": 100,
   "exercises": [
     {
@@ -93,9 +93,9 @@
     {
       "name": "spinlock_guard",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "rwlock",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "xiongzile",
-  "runId": "36432390796",
+  "runId": "36451441077",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
