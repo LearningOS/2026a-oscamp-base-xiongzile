@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-xiongzile",
-  "commit": "842fcc508b4f67e75d0995601a5e5d4f9db154db",
-  "score": 15,
+  "commit": "152677e59ce2ff75a42d62dcfde5a0d82adf8300",
+  "score": 19,
   "totalScore": 100,
   "exercises": [
     {
@@ -37,9 +37,9 @@
     {
       "name": "mem_primitives",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "bump_allocator",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "xiongzile",
-  "runId": "36399261461",
+  "runId": "36399458612",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
