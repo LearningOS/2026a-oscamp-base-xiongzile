@@ -143,7 +143,6 @@ impl Sv39PageTable {
 
         let ppn2 = if !is_valid2 {
             let new_ppn = self.alloc_node();
-            println!("map: set ppn <-> vpn {}, {}", ppn1, vpn2);
             let pg_node = self.nodes.get_mut(&ppn1).unwrap();
             pg_node.entries[vpn2] = (new_ppn << PPN_SHIFT) | PTE_V;
             new_ppn
