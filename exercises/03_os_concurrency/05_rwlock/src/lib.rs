@@ -109,7 +109,7 @@ impl<T> RwLock<T> {
     /// 4. On success return RwLockWriteGuard { lock: self }.
     pub fn write(&self) -> RwLockWriteGuard<'_, T> {
         // TODO
-        self.state.store(
+        self.state.fetch_or(
             self.state.load(Ordering::Acquire) | WRITER_WAITING,
             Ordering::Release,
         );
@@ -128,7 +128,15 @@ impl<T> RwLock<T> {
                 Ordering::Acquire,
             ) {
                 Ok(_) => return RwLockWriteGuard { lock: self },
-                Err(_) => continue,
+                Err(_) => match self.state.compare_exchange(
+                    0,
+                    WRITER_HOLDING,
+                    Ordering::AcqRel,
+                    Ordering::Acquire,
+                ) {
+                    Ok(_) => return RwLockWriteGuard { lock: self },
+                    Err(_) => continue,
+                },
             }
         }
     }
