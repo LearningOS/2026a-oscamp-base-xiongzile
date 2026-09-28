@@ -109,10 +109,7 @@ impl<T> RwLock<T> {
     /// 4. On success return RwLockWriteGuard { lock: self }.
     pub fn write(&self) -> RwLockWriteGuard<'_, T> {
         // TODO
-        self.state.fetch_or(
-            self.state.load(Ordering::Acquire) | WRITER_WAITING,
-            Ordering::Release,
-        );
+        self.state.fetch_or(WRITER_WAITING, Ordering::Release);
 
         loop {
             let state = self.state.load(Ordering::Acquire);
