@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-xiongzile",
-  "commit": "c90bb8b3fbf516b0d42ecb67bea7a21c9016b1f6",
-  "score": 73,
+  "commit": "a311e6fa85dbf6335d854e2615b12a1a929ad14b",
+  "score": 76,
   "totalScore": 100,
   "exercises": [
     {
@@ -128,9 +128,9 @@
     {
       "name": "tokio_tasks",
       "max": 3,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 3,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "async_channel_ex",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "xiongzile",
-  "runId": "36523917578",
+  "runId": "36525012961",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
