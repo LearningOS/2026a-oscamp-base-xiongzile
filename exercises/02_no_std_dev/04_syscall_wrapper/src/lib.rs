@@ -126,7 +126,7 @@ pub unsafe fn syscall3(id: usize, arg0: usize, arg1: usize, arg2: usize) -> isiz
         "syscall",
         inlateout("rax") id => ret,
         in("rdi") arg0, in("rsi") arg1, in("rdx") arg2,
-        out("rcx") _, out("r11")
+        out("rcx") _, out("r11") _
     }
 
     ret
