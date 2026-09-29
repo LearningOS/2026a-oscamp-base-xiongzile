@@ -208,7 +208,7 @@ pub fn sys_close(fd: usize) -> isize {
 pub fn sys_exit(code: i32) -> ! {
     // TODO: Call syscall3 to implement exit
     unsafe {
-        syscall3(NATIVE_SYS_EXIT, code, 0, 0);
+        syscall3(NATIVE_SYS_EXIT, code as usize, 0, 0);
     }
 
     unreachable!()
