@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-xiongzile",
-  "commit": "4bf1248e3f8f72dc2551150fede1a71cd2c123a3",
-  "score": 79,
+  "commit": "44a1fd741b79052b1a976f47efba524c6f4c0a79",
+  "score": 83,
   "totalScore": 100,
   "exercises": [
     {
@@ -142,9 +142,9 @@
     {
       "name": "select_timeout",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "pte_flags",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "xiongzile",
-  "runId": "36525512370",
+  "runId": "36526184993",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
