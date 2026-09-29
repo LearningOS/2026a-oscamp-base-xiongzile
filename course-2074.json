@@ -2,7 +2,7 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-xiongzile",
-  "commit": "0bdf471fa62140990a1d38cd1ba86c3942f47a2b",
+  "commit": "c8051d544faa056ceff24e7025136a327ca94622",
   "score": 88,
   "totalScore": 100,
   "exercises": [
@@ -176,9 +176,9 @@
     }
   ],
   "student": "xiongzile",
-  "runId": "36528848168",
+  "runId": "36530226995",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
