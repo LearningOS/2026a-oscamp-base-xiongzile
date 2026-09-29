@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-xiongzile",
-  "commit": "358554715d452cbd6377bb5831037b169ab2fada",
-  "score": 94,
+  "commit": "533d9b2ad3dcf17797b9d176a4967ced96b78de5",
+  "score": 100,
   "totalScore": 100,
   "exercises": [
     {
@@ -114,9 +114,9 @@
     {
       "name": "green_threads",
       "max": 6,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 6,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "basic_future",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "xiongzile",
-  "runId": "36531301849",
+  "runId": "36533198691",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
