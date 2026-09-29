@@ -62,8 +62,8 @@ impl TaskContext {
     /// - Set `sp = stack_top` with 16-byte alignment (RISC-V ABI requires 16-byte aligned stack at function entry).
     /// - Leave `s0`–`s11` zero; they will be loaded on switch.
     pub fn init(&mut self, stack_top: usize, entry: usize) {
-        self.ra = entry;
-        self.sp = (stack_top + 15) & !15;
+        self.ra = entry as u64;
+        self.sp = ((stack_top + 15) & !15) as u64;
     }
 }
 
@@ -117,7 +117,7 @@ const STACK_SIZE: usize = 1024 * 64;
 /// Allocate a stack for a coroutine. Returns `(buffer, stack_top)` where `stack_top` is the high address
 /// (stack grows down). The buffer must be kept alive for the lifetime of the context using this stack.
 pub fn alloc_stack() -> (Vec<u8>, usize) {
-    let buf = vec![u8; STACK_SIZE];
+    let buf = vec![0u8; STACK_SIZE];
     let top = buf.as_ptr() as usize + STACK_SIZE;
     (buf, top)
 }
