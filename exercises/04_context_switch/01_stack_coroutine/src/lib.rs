@@ -104,6 +104,9 @@ pub unsafe fn switch_context(old: &mut TaskContext, new: &TaskContext) {
         "ld s9,  88(a1)",
         "ld s10, 96(a1)",
         "ld s11, 104(a1)",
+        // clear a0 a1
+        "li a0, 0",
+        "li a1, 0",
         // jump
         "ret",
     );
